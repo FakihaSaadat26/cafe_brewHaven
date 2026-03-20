@@ -7,7 +7,7 @@ A fully functional, responsive café website built with HTML, CSS, and vanilla J
 ## 📁 Project Structure
 
 ```
-frintend/
+cafe_brewHaven/
 ├── index.html        # Homepage
 ├── menu.html         # Menu page with filtering
 ├── about.html        # About us page
