@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Brew Haven Café</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">☕ Brew Haven</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <button id="dark-mode-btn" class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon-nav" title="Shopping Cart">
+                    <span class="cart-count" id="navbar-cart-count">0</span>
+                    🛒
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Page Hero -->
+    <section class="cart-hero">
+        <div class="cart-hero-content">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your items and proceed to checkout</p>
+        </div>
+    </section>
+
+    <!-- Main Cart Section -->
+    <section class="cart-main">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items-section">
+                    <h2>Cart Items</h2>
+                    <div id="cart-items-container" class="cart-items-grid">
+                        <!-- Cart items will be dynamically loaded here -->
+                    </div>
+                    <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h3>Your Cart is Empty</h3>
+                        <p>Start adding items from our menu to get started!</p>
+                        <a href="menu.html" class="cta-button">Browse Menu</a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <aside class="cart-summary-section">
+                    <!-- Summary Card -->
+                    <div class="cart-summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="summary-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (10%)</span>
+                            <span id="summary-tax">$0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row summary-total">
+                            <span>Total</span>
+                            <span id="summary-total">$0.00</span>
+                        </div>
+                        <button id="checkout-btn" class="cta-button checkout-btn">Proceed to Checkout</button>
+                        <a href="menu.html" class="secondary-btn">Continue Shopping</a>
+                    </div>
+
+                    <!-- AI Recommendations Section -->
+                    <div class="ai-recommendations-card">
+                        <div class="recommendations-header">
+                            <h3>🤖 Smart Recommendations</h3>
+                            <p class="ai-badge">AI-Powered for You</p>
+                        </div>
+                        <div id="recommendations-container" class="recommendations-list">
+                            <!-- Recommendations will be loaded here -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Analytics Section -->
+    <section class="ai-analytics-section">
+        <div class="container">
+            <h2>Your Taste Profile</h2>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <span class="analytics-label">Favorite Category</span>
+                    <span class="analytics-value" id="favorite-category">—</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label">Most Ordered</span>
+                    <span class="analytics-value" id="most-ordered">—</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label">Average Spend</span>
+                    <span class="analytics-value" id="avg-spend">—</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label">Lifetime Savings</span>
+                    <span class="analytics-value" id="lifetime-savings">—</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Brew Haven</h4>
+                    <p>Your favorite local café for artisan coffee and fresh pastries.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Fri: 6:00 AM - 8:00 PM</p>
+                    <p>Sat-Sun: 7:00 AM - 9:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 123 Main Street, Coffee City</p>
+                    <p>☎️ (555) 123-4567</p>
+                    <p>✉️ hello@brewhaven.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brew Haven Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" title="Back to Top">↑</button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="ai-recommendations.js"></script>
+</body>
+</html>
